@@ -1,17 +1,13 @@
-const { createApp } = vue
+const { createApp } = Vue;
 
-const app = createApp ({
+const app = createApp({
     data(){
         return{
-            tasks:[]
+            tasks:["HTML", "CSS", "JavaScript", "PHP"]
 
         }
     }
 
-
-
-})
-
-
+});
 
 app.mount('#app')
