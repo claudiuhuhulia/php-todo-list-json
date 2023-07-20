@@ -1,0 +1,10 @@
+body{
+    background-color: #001632;
+}
+h1{
+    color: aqua;
+}
+.card{
+    width: 600px;
+    margin: 0 auto;
+}
