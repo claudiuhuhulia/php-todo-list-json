@@ -18,16 +18,18 @@ const app = createApp({
 
             axios.post('http://localhost/php-todo-list-json/api/',data, config)
             .then(res => {
-                this.tasks=res.data
+                this.tasks.push(res.data);
+                this.newTask=''
             })
         }
 
     },
     
     created(){
-    axios.get('http://localhost/php-todo-list-json/api/').then(res => 
+    axios.get('http://localhost/php-todo-list-json/api/')
+    .then(res => 
     {this.tasks= res.data})
-    }
+}
 });
 
 app.mount('#app')
