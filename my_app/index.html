@@ -21,7 +21,7 @@
         <div class="card mt-3">
             <div class="card-body">
                 <ul class="list-group">
-                    <li class="list-group-item">An item</li>
+                    <li v-for="(task, i) in tasks" :key="i" class="list-group-item">{{task}}</li>
               
                   </ul>
                   <div class="add-task d-flex justify-content-center align-items-center mt-3">
