@@ -25,14 +25,15 @@
                     <li v-for="(task, i) in tasks" :key="i" class="list-group-item">{{task}}</li>
               
                   </ul>
+                  
+
+                    <form @submit.prevent="addTask">
                   <div class="add-task d-flex justify-content-center align-items-center mt-3">
-                  
-                    <input type="text" class="form-control" id="add-task-bar" placeholder="Aggiungi Task">
-                  
-                  
-                    <button type="submit" class="btn btn-primary">Inserisci</button>
-                  
-                </div>
+                        <input v-model.trim="newTask" type="text" class="form-control" placeholder="Aggiungi Task">
+                        <button type="submit" class="btn btn-primary">Inserisci</button>
+                    </div>
+                
+                    </form>  
             </div>
           </div>
 

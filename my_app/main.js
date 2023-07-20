@@ -3,14 +3,31 @@ const { createApp } = Vue;
 const app = createApp({
     data(){
         return{
-            tasks:[]
-
+            tasks:[],
+            newTask:''
         }
     },
-created(){
-axios.get('http://localhost/php-todo-list-json/api/').then(res => 
-{this.tasks= res.data})
-}
+    methods:{
+        addTask(){
+
+            const data = {task:this.newTask}
+
+            const config = {
+            headers: {'Content-Type': 'multipart/form-data'}
+            }
+
+            axios.post('http://localhost/php-todo-list-json/api/',data, config)
+            .then(res => {
+                this.tasks=res.data
+            })
+        }
+
+    },
+    
+    created(){
+    axios.get('http://localhost/php-todo-list-json/api/').then(res => 
+    {this.tasks= res.data})
+    }
 });
 
 app.mount('#app')
