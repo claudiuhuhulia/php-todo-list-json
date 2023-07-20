@@ -1,1 +1,6 @@
-["HTML","CSS","JavaScript","PHP"]
+[
+{"name":"HTML","done":false},
+{"name":"CSS","done":false},
+{"name":"JavaScript","done":false},
+{"name":"PHP","done":false}
+]
